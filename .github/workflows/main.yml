@@ -184,6 +184,11 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
+      
+      - name: Clean DerivedData & iOS Pods
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData
+          cd ios && pod deintegrate && rm -rf Pods Podfile.lock && pod install --repo-update
 
       - name: Run CocoaPods install
         run: pod install --project-directory=ios
