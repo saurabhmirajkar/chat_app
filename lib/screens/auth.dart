@@ -109,12 +109,12 @@ class _AuthScreenState extends State<AuthScreen> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          if (!_isLogin)
-                            UserImagePicker(
-                              onPickedImage: (pickedImage) {
-                                _selectedImage = pickedImage;
-                              },
-                            ),
+                          // if (!_isLogin)
+                            // UserImagePicker(
+                            //   onPickedImage: (pickedImage) {
+                            //     _selectedImage = pickedImage;
+                            //   },
+                            // ),
                           TextFormField(
                             decoration: const InputDecoration(
                                 labelText: 'Email Address'),
